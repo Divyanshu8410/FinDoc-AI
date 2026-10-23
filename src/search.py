@@ -4,11 +4,15 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 from src.chunking import split_into_chunks
 
-model = SentenceTransformer("all-MiniLM-L6-v2")
-
 
 def search_chunks(text, question, top_k=3):
     chunks = split_into_chunks(text)
+    if not chunks:
+        return []
+
+    if top_k <= 0:
+        return []
+    model = SentenceTransformer("all-MiniLM-L6-v2")
 
     if not chunks:
         return []
