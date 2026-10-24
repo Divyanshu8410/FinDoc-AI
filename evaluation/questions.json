@@ -1,0 +1,32 @@
+
+[
+  {
+    "question": "What annual report is this?",
+    "expected_keywords": [
+      "integrated annual report",
+      "2024-25"
+    ]
+  },
+  {
+    "question": "Which vehicle brands are mentioned in the report introduction?",
+    "expected_keywords": [
+      "passenger vehicles",
+      "jaguar land rover"
+    ]
+  },
+  {
+    "question": "What benefits does the separation of businesses aim to achieve?",
+    "expected_keywords": [
+      "pursue distinct strategies",
+      "unlock new growth opportunities"
+    ]
+  },
+  {
+    "question": "What is the company's approach to creating long-term value?",
+    "expected_keywords": [
+      "long-term value",
+      "stakeholders"
+    ]
+  }
+]
+    
