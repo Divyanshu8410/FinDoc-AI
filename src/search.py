@@ -120,12 +120,13 @@ def search_prepared_document(question, chunks, embeddings, top_k=3):
     ranked_indices = scores.argsort()[::-1][:top_k]
 
     return [
-        {
-            "chunk": chunks[index],
-            "score": float(scores[index])
-        }
-        for index in ranked_indices
-    ]
+    {
+        "chunk_id": int(index),
+        "chunk": chunks[index],
+        "score": float(scores[index])
+    }
+    for index in ranked_indices
+]
 
 
 def search_chunks(text, question, top_k=3):
